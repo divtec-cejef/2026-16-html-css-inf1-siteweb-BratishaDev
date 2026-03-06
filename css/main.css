@@ -1,0 +1,15 @@
+main {
+    position: relative;
+}
+
+#blue-accueil {
+    position: absolute; /* привязан к main, не к экрану */
+    z-index: 0;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.5;
+    pointer-events: none;
+    background: radial-gradient(circle, #12DFFF, transparent 70%);
+}
