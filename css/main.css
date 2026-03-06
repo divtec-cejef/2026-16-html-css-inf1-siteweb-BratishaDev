@@ -1,15 +1,26 @@
+body {
+    overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
+}
+
 main {
-    position: relative;
+    position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
+    min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
 }
 
 #blue-accueil {
-    position: absolute; /* привязан к main, не к экрану */
-    z-index: 0;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.5;
-    pointer-events: none;
-    background: radial-gradient(circle, #12DFFF, transparent 70%);
+    position: absolute;          /* sorti du flux, coordonnées depuis main */
+    left: -70vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
+    top: 50%;                    /* bord supérieur de l'élément au milieu de main */
+    transform: translateY(-50%); /* remonte de la moitié de sa hauteur = centré verticalement */
+    width: 114vmin;
+    height: 114vmin;             /* valeurs identiques = carré, vmin depuis le petit côté de l'écran */
+    border-radius: 50%;          /* arrondit le carré en cercle */
+    filter: blur(75px);          /* flou sur l'élément, crée un effet de lueur */
+    opacity: 0.95;               /* presque opaque (0 = invisible, 1 = opaque) */
+    pointer-events: none;        /* les clics passent à travers l'élément */
+    background: radial-gradient(
+            circle,         /* forme circulaire du dégradé (ellipse par défaut) */
+            #12DFFF,        /* couleur au centre */
+            transparent 90% /* disparition progressive à partir de 90% du rayon */
+    );
 }
