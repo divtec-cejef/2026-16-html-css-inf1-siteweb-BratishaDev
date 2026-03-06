@@ -9,18 +9,18 @@ main {
 
 #blue-accueil {
     position: absolute;          /* sorti du flux, coordonnées depuis main */
-    left: -70vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
+    left: -106vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
     top: 50%;                    /* bord supérieur de l'élément au milieu de main */
     transform: translateY(-50%); /* remonte de la moitié de sa hauteur = centré verticalement */
-    width: 114vmin;
-    height: 114vmin;             /* valeurs identiques = carré, vmin depuis le petit côté de l'écran */
+    width: 145vmin;
+    height: 145vmin;             /* valeurs identiques = carré, vmin depuis le petit côté de l'écran */
     border-radius: 50%;          /* arrondit le carré en cercle */
-    filter: blur(75px);          /* flou sur l'élément, crée un effet de lueur */
-    opacity: 0.95;               /* presque opaque (0 = invisible, 1 = opaque) */
+    filter: blur(80px);          /* flou sur l'élément, crée un effet de lueur */
+    opacity: 0.97;               /* presque opaque (0 = invisible, 1 = opaque) */
     pointer-events: none;        /* les clics passent à travers l'élément */
     background: radial-gradient(
             circle,         /* forme circulaire du dégradé (ellipse par défaut) */
             #12DFFF,        /* couleur au centre */
-            transparent 90% /* disparition progressive à partir de 90% du rayon */
+            transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
 }
