@@ -25,3 +25,14 @@ main {
     );
 
 }
+
+header {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.logo {
+    max-width: 30vmin;
+    max-height: 20vmin;
+}
