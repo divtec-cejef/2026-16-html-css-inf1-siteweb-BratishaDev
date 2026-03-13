@@ -23,4 +23,5 @@ main {
             #12DFFF,        /* couleur au centre */
             transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
+
 }
