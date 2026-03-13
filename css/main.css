@@ -37,16 +37,15 @@ header {
 
 .search-bar {
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 50px;
     box-shadow: 2px 2px 6px #999999;
-    /* overflow: hidden;  обрезает всё что вылезает за border-radius */
+    overflow: hidden;  /* обрезает всё что вылезает за border-radius */
     background: white;
     width: 238px;
     height: 44px;
-    gap: 5px;
     flex-shrink: 0;
+    padding: 4px 8px 4px 16px;
 }
 
 .search-bar input {
@@ -54,7 +53,6 @@ header {
     outline: none;       /* убираем синюю рамку при фокусе */
     background: none;    /* фон от родителя */
     font-size: 16px;
-    margin-left: 0px;
     flex: 1;
 }
 
@@ -68,12 +66,17 @@ header {
     cursor: pointer;
     width: 36px;
     height: 36px;
-    margin-right: 10px;
     flex-shrink: 0;
 }
 
 .btn-recherche svg {
     color: #202020;
+}
+
+.btn-menu {
+    border: none;        /* убираем стандартную рамку */
+    outline: none;       /* убираем синюю рамку при фокусе */
+    background: none;    /* фон от родителя */
 }
 
                                     /*----------STYLES MAIN----------*/
