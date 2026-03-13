@@ -1,4 +1,7 @@
                                     /*----------STYLES GÉNÉRAUX----------*/
+* {
+    box-sizing: border-box;
+}
 
 body {
     overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
@@ -13,20 +16,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin: 15px 20px;
+}
+
+button {
+    padding: 0;
 }
 
                                     /*----------STYLES HEADER----------*/
-.logo {
-    max-width: 30vmin;
-    max-height: 20vmin;
-}
-
-.logo svg {
-    width: 50px;
-    height: 32px;
-}
 
 .btn-recherche svg,
 .btn-compte svg,
@@ -35,12 +31,31 @@ header {
     height: 32px;
 }
 
+.logo, .logo svg {
+    width: 50px;
+    height: 32px;
+}
+
+.btn-compte, .btn-menu {
+    max-width: 32px;
+    max-height: 32px;
+}
+.btn-menu, .search-bar input {
+    border: none;        /* убираем стандартную рамку */
+    outline: none;       /* убираем синюю рамку при фокусе */
+    background: none;    /* фон от родителя */
+}
+
+.logo {
+    margin-right: 20px;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     border-radius: 50px;
-    box-shadow: 2px 2px 6px #999999;
-    overflow: hidden;  /* обрезает всё что вылезает за border-radius */
+    box-shadow: 0 1px 6px #999999;
+    /*overflow: hidden;   обрезает всё что вылезает за border-radius */
     background: white;
     width: 238px;
     height: 44px;
@@ -49,10 +64,8 @@ header {
 }
 
 .search-bar input {
-    border: none;        /* убираем стандартную рамку */
-    outline: none;       /* убираем синюю рамку при фокусе */
-    background: none;    /* фон от родителя */
     font-size: 16px;
+    min-width: 0;
     flex: 1;
 }
 
@@ -71,13 +84,15 @@ header {
 
 .btn-recherche svg {
     color: #202020;
+    margin: 6px;
 }
 
-.btn-menu {
-    border: none;        /* убираем стандартную рамку */
-    outline: none;       /* убираем синюю рамку при фокусе */
-    background: none;    /* фон от родителя */
+.btn-compte {
+    margin: 0 15px;
 }
+
+
+
 
                                     /*----------STYLES MAIN----------*/
 
