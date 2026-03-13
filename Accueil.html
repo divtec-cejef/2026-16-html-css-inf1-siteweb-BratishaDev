@@ -56,6 +56,10 @@
               stroke="#202020" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
+    <symbol id="сontour" viewBox="0 0 572 247" fill="none">
+        <path opacity="0.8" d="M566.001 67.8825C564.65 59.5745 558.476 53.3638 551.586 48.7556C535.871 38.2442 516.856 31.7092 498.714 26.3164C469.412 17.6063 438.413 13.0042 408.015 9.47539C365.368 4.5247 321.32 5.16958 278.666 9.47539C238.417 13.5384 198.172 22.7535 159.91 35.3201C119.186 48.6952 79.2828 67.3937 47.3947 95.6865C28.1702 112.743 9.92396 134.361 6.51953 160.252C3.48941 183.296 13.8924 204.135 33.7051 216.979C56.8737 231.999 86.4318 237.864 113.811 239.885C156.875 243.064 200.083 238.999 242.725 233.307C320.044 222.986 400.169 207.143 470.513 173.314C494.561 161.749 519.438 145.792 536.977 125.87C548.827 112.41 558.131 92.0051 549.554 74.6936C540.634 56.688 516.442 46.8489 497.795 42.0378C448.584 29.341 355.157 26.3164 296.819 42.0378" stroke="#F6F3F1" stroke-opacity="0.46" stroke-width="12" stroke-linecap="round"/>
+    </symbol>
+
 </svg>
 
 <header>
@@ -83,18 +87,23 @@
 <div class="hero-slider">
     <!-- image d'arrière-plan + texte + bouton -->
     <div class="slide slide-1">
+        <svg aria-hidden="true"><use href="#сontour"/></svg>
         <img src="css/sources/img/accueil/traditional-ukrainian-russian-borscht-red-soup-bowl-top-view.jpg" alt="borscht">
-        <h1>Cuisine ukrainienne</h1>
-        <p>La cuisine ukrainienne est un mélange unique de traditions, de saveurs et d’histoire.</p>
-        <a class="btn-commencer" href="Recettes.html">Commencer</a>
+        <div class="slide-content">
+            <h1>Cuisine ukrainienne</h1>
+            <p>La cuisine ukrainienne est un mélange unique de traditions, de saveurs et d’histoire.</p>
+            <a class="btn-invitation" href="Recettes.html">Commencer</a>
+        </div>
     </div>
     <!-- deuxième diapositive -->
     <div class="slide slide-2">
+        <svg aria-hidden="true"><use href="#сontour"/></svg>
         <img src="css/sources/img/accueil/top_view_little_raw_dumplings_with_flour_vegetables_dark_background.jpg" alt="vareniki">
-        <h1>Nouvelle expérience</h1>
-        <p>Découvrez des recettes authentiques, explorez les ingrédients et plongez dans la culture gastronomique de l’Ukraine. </p>
-        <a class="btn-regarder" href="GuideIngredients.html">Regarder</a>
-
+        <div class="slide-content">
+            <h1>Nouvelle expérience</h1>
+            <p>Découvrez des recettes authentiques, explorez les ingrédients et plongez dans la culture gastronomique de l’Ukraine. </p>
+            <a class="btn-invitation" href="GuideIngredients.html">Regarder</a>
+        </div>
     </div>
 </div>
 

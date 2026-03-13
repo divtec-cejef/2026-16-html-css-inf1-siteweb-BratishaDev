@@ -23,11 +23,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* поверх слайдера */
+    z-index: 10; /* au-dessus du slideur */
 }
 
 button {
     padding: 0;
+}
+
+h1 {
+    text-align: center;
 }
 
                                     /*----------STYLES HEADER----------*/
@@ -49,9 +53,9 @@ button {
     max-height: 32px;
 }
 .btn-menu, .search-bar input {
-    border: none;        /* убираем стандартную рамку */
-    outline: none;       /* убираем синюю рамку при фокусе */
-    background: none;    /* фон от родителя */
+    border: none;        /* On supprime le cadre standard */
+    outline: none;       /* Supprimer le cadre bleu lorsque le curseur est sur l'élément */
+    background: none;    /* arrière-plan hérité du parent */
 }
 
 .logo {
@@ -119,12 +123,44 @@ button {
     scroll-snap-align: start;
     background-size: cover;
     background-position: center;
+    position: relative; /* ancre pour le contenu */
 }
 
 .slide img {
-    max-width: 100%;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* s'étend sur tout le bloc */
+    z-index: -2;
 }
+
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to bottom,
+            white 1%,       /* держим белый до 5% */
+            rgba(255,255,255, 0.8) 25%,  /* начало резкого перехода */
+            rgba(255,255,255, 0.4) 55%,   /* быстро падает */
+            rgba(255,255,255, 0.1) 75%,   /* замедляется */
+            transparent 85%  /* плавно заканчивается */
+    );
+    z-index: 1;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2; /* поверх картинки и градиента */
+    margin-top: 180px; /* отступ от хедера */
+    text-align: center;
+}
+
 #blue-accueil {
     position: absolute;          /* sorti du flux, coordonnées depuis main */
     left: -106vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
