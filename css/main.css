@@ -1,3 +1,5 @@
+                                    /*----------STYLES GÉNÉRAUX----------*/
+
 body {
     overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
 }
@@ -6,6 +8,72 @@ main {
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 20px;
+}
+
+                                    /*----------STYLES HEADER----------*/
+.logo {
+    max-width: 30vmin;
+    max-height: 20vmin;
+}
+
+.logo svg {
+    width: 50px;
+    height: 32px;
+}
+
+.btn-recherche svg,
+.btn-compte svg,
+.btn-menu svg {
+    width: 32px;
+    height: 32px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 2px 2px 6px #999999;
+    overflow: hidden; /* обрезает всё что вылезает за border-radius */
+    background: white;
+    padding: 0 20px;
+    width: 238px;
+    height: 44px;
+    gap: 5px;
+}
+
+.search-bar input {
+    border: none;        /* убираем стандартную рамку */
+    outline: none;       /* убираем синюю рамку при фокусе */
+    background: none;    /* фон от родителя */
+    flex: 1;             /* занимает всё доступное место до кнопки */
+    font-size: 16px;
+}
+
+.btn-recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFC412;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+}
+
+.btn-recherche svg {
+    color: #202020;
+}
+
+                                    /*----------STYLES MAIN----------*/
 
 #blue-accueil {
     position: absolute;          /* sorti du flux, coordonnées depuis main */
@@ -23,16 +91,4 @@ main {
             #12DFFF,        /* couleur au centre */
             transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
-
-}
-
-header {
-    display: flex;
-    justify-content: start;
-    gap: 10px;
-}
-
-.logo {
-    max-width: 30vmin;
-    max-height: 20vmin;
 }
