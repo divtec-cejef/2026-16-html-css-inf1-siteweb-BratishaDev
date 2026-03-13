@@ -41,20 +41,21 @@ header {
     align-items: center;
     border-radius: 50px;
     box-shadow: 2px 2px 6px #999999;
-    overflow: hidden; /* обрезает всё что вылезает за border-radius */
+    /* overflow: hidden;  обрезает всё что вылезает за border-radius */
     background: white;
-    padding: 0 20px;
     width: 238px;
     height: 44px;
     gap: 5px;
+    flex-shrink: 0;
 }
 
 .search-bar input {
     border: none;        /* убираем стандартную рамку */
     outline: none;       /* убираем синюю рамку при фокусе */
     background: none;    /* фон от родителя */
-    flex: 1;             /* занимает всё доступное место до кнопки */
     font-size: 16px;
+    margin-left: 0px;
+    flex: 1;
 }
 
 .btn-recherche {
@@ -67,6 +68,8 @@ header {
     cursor: pointer;
     width: 36px;
     height: 36px;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .btn-recherche svg {
