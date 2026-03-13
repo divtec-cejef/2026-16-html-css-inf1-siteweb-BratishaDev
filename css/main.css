@@ -10,12 +10,15 @@ body {
 main {
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
+    margin: 0 20px;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    gap: 16px;
 }
 
 button {
@@ -47,7 +50,7 @@ button {
 }
 
 .logo {
-    margin-right: 20px;
+
 }
 
 .search-bar {
@@ -55,7 +58,7 @@ button {
     align-items: center;
     border-radius: 50px;
     box-shadow: 0 1px 6px #999999;
-    /*overflow: hidden;   обрезает всё что вылезает за border-radius */
+    gap: 5px;
     background: white;
     width: 238px;
     height: 44px;
@@ -88,7 +91,7 @@ button {
 }
 
 .btn-compte {
-    margin: 0 15px;
+
 }
 
 
