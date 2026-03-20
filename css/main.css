@@ -16,10 +16,11 @@ body {
 }
 
 main {
+    display: flex;
     overflow: clip;
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
-    margin: 0 20px;
+    align-items: center;
 }
 
 header {
@@ -39,25 +40,33 @@ button {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Brice Black', sans-serif;
 }
 
 
 
 h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 42px;
 }
 
+
+h3,h4,h5,h6, p, a{
+    font-family: 'Outfit', sans-serif;
+}
 p {
     line-height: 26px;
-    font-size: 18px;
-    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
 }
 
 a {
     text-decoration: none;
+    font-size: 14px;
+}
+
+a:visited {
+    color: inherit;
 }
 
                                     /*----------STYLES HEADER----------*/
@@ -194,15 +203,16 @@ a {
     height: 160%;
 }
 
+.slide-content h1, .slide-content p {
+    margin: 8px auto;
+}
 .slide-content h1 {
     width: 335px;
-    margin: 8px auto;
     text-transform: uppercase;
 }
 
 .slide-content p {
     width: 266px;
-    margin: 8px auto;
 }
 
 .btn-invitation {
@@ -210,7 +220,7 @@ a {
     padding: 16px 12px;
     margin: 16px auto;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 16px;
     text-align: center;
     background-color: #202020;
@@ -218,8 +228,49 @@ a {
     transition: transform 0.3s ease;
 }
 
+.btn-invitation:visited {
+    color: #fff;
+}
+
 .btn-invitation:hover {
     transform: scale(1.1);
+}
+
+.liste-sections {
+    z-index: 2;
+    margin: 0 56px;
+    gap: 40px;
+}
+
+.bloc-carte {
+    padding: 35px 40px;
+    width: 328px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    box-shadow: 0px 0px 16px 0px rgba(153, 153, 153, 0.23);
+}
+
+.bloc-carte svg, h3, hr, p  {
+    margin: 0;
+}
+.bloc-carte p {
+    font-size: 14px;
+}
+
+a .bth-leger {
+    background-color: white;
+    border: 2px solid #12DFFF;
+    width: 157px;
+}
+
+.ligne {
+    border: none;          /* убираем стандартный стиль */
+    height: 2px;           /* толщина */
+    background-color: #FFC412;   /* цвет */
+    width: 50px;            /* ширина */
+    margin: 16px 0;     /* центрирование */
 }
 
 #blue-accueil {
@@ -238,4 +289,14 @@ a {
             #12DFFF,        /* couleur au centre */
             transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media (min-width: 600px) {
+    #blue-accueil {
+        width: 80vmin;
+        height: 80vmin;
+        left: -55vmin;
+    }
 }
