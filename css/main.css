@@ -20,7 +20,7 @@ main {
     overflow: clip;
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
-    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -237,8 +237,9 @@ a:visited {
 }
 
 .liste-sections {
+    position: relative;
     z-index: 2;
-    margin: 0 56px;
+    margin: 48px 56px;
     gap: 40px;
 }
 
@@ -250,19 +251,37 @@ a:visited {
     flex-direction: column;
     border-radius: 16px;
     box-shadow: 0px 0px 16px 0px rgba(153, 153, 153, 0.23);
+    gap: 20px;
 }
 
-.bloc-carte svg, h3, hr, p  {
+.bloc-carte svg,
+.bloc-carte h3,
+.bloc-carte hr,
+.bloc-carte p {
     margin: 0;
 }
+
 .bloc-carte p {
     font-size: 14px;
+    color: #737373;
 }
 
-a .bth-leger {
+.bth-leger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #12DFFF;
+    font-weight: bold;
     background-color: white;
     border: 2px solid #12DFFF;
-    width: 157px;
+    border-radius: 37px;
+    width: 164px;
+}
+
+.bth-leger:visited {
+    color: #12DFFF;
 }
 
 .ligne {
@@ -273,8 +292,21 @@ a .bth-leger {
     margin: 16px 0;     /* центрирование */
 }
 
+.bloc-carte > svg {
+    width: 40px;
+    height: 40px;
+    background-color: #FFC412;
+    border-radius: 50%;
+}
+
+.bth-leger svg {
+    width: 10px;
+    height: 16px;
+}
+
 #blue-accueil {
-    position: absolute;          /* sorti du flux, coordonnées depuis main */
+    position: absolute; /* sorti du flux, coordonnées depuis main */
+    z-index: 0;
     left: -106vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
     top: 50%;                    /* bord supérieur de l'élément au milieu de main */
     transform: translateY(-50%); /* remonte de la moitié de sa hauteur = centré verticalement */
