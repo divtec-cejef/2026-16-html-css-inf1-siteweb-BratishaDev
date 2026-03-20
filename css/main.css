@@ -57,7 +57,7 @@ h1 {
 }
 
 
-h3,h4,h5,h6, p, a{
+h3,h4,h5,h6, p, a, ul, ol {
     font-family: 'Outfit', sans-serif;
 }
 p {
@@ -72,6 +72,10 @@ a {
 
 a:visited {
     color: inherit;
+}
+ul {
+    list-style: none;
+    padding-inline-start: 0;
 }
 
                                     /*----------STYLES HEADER----------*/
@@ -341,6 +345,36 @@ a:visited {
             #12DFFF,        /* couleur au centre */
             transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
+}
+/*----------STYLES FOOTER----------*/
+
+footer {
+    padding: 48px 16px;
+    background: #212121;
+}
+
+.block-liste-logo {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.block-liste-logo svg  {
+    width: 50px;
+    height: 32px;
+    color: white;
+}
+
+.block-liste-logo ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    color: white;
+}
+
+.block-liste-logo ul li {
+
 }
 
 /* ---------- MEDIA QUERIES ---------- */
