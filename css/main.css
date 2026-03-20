@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Brice Black"; /* придумываешь сам */
+    font-family: "Brice Black";
     src: url('sources/Fonts/Brice Black.otf') format('truetype');
 }
 
@@ -8,19 +8,23 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
-    max-width: 900px;
-    margin: 0 auto;
+html {
+    background-color: #f0f0f0;
+}
 
+body {
+    max-width: 900px;
+    overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
+    margin: 0 auto;
 }
 
 main {
     display: flex;
+    justify-content: center;
     overflow: clip;
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
-    justify-content: center;
+    background-color: white;
 }
 
 header {
@@ -34,6 +38,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 10; /* au-dessus du slideur */
+    background-color: white;
 }
 
 button {
@@ -177,11 +182,11 @@ a:visited {
     height: 100%;
     background: linear-gradient(
             to bottom,
-            white 1%,       /* держим белый до 5% */
-            rgba(255,255,255, 0.8) 25%,  /* начало резкого перехода */
-            rgba(255,255,255, 0.4) 55%,   /* быстро падает */
-            rgba(255,255,255, 0.1) 75%,   /* замедляется */
-            transparent 85%  /* плавно заканчивается */
+            white 0%,       /* держим белый до 0% */
+            rgba(255,255,255, 0.8) 25%,  /* début d'une transition abrupte */
+            rgba(255,255,255, 0.4) 55%,   /* tombe rapidement */
+            rgba(255,255,255, 0.1) 75%,   /* ralentit */
+            transparent 85%  /* le dégradé s'estompe progressivement */
     );
     z-index: 1;
 }
@@ -237,6 +242,8 @@ a:visited {
 }
 
 .liste-sections {
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 2;
     margin: 48px 56px;
@@ -244,6 +251,7 @@ a:visited {
 }
 
 .bloc-carte {
+    background-color: white;
     padding: 35px 40px;
     width: 328px;
     z-index: 3;
@@ -259,6 +267,10 @@ a:visited {
 .bloc-carte hr,
 .bloc-carte p {
     margin: 0;
+}
+
+.bloc-carte h3 {
+    font-size: 1.5rem;
 }
 
 .bloc-carte p {
@@ -292,11 +304,19 @@ a:visited {
     margin: 16px 0;     /* центрирование */
 }
 
-.bloc-carte > svg {
-    width: 40px;
-    height: 40px;
+.boitier-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
     background-color: #FFC412;
     border-radius: 50%;
+}
+
+.boitier-icone img {
+    width: 40px;
+    height: 40px;
 }
 
 .bth-leger svg {
@@ -308,7 +328,7 @@ a:visited {
     position: absolute; /* sorti du flux, coordonnées depuis main */
     z-index: 0;
     left: -106vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
-    top: 50%;                    /* bord supérieur de l'élément au milieu de main */
+    top: 60%;                    /* bord supérieur de l'élément au milieu de main */
     transform: translateY(-50%); /* remonte de la moitié de sa hauteur = centré verticalement */
     width: 145vmin;
     height: 145vmin;             /* valeurs identiques = carré, vmin depuis le petit côté de l'écran */
