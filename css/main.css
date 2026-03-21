@@ -57,7 +57,7 @@ h1 {
 }
 
 
-h3,h4,h5,h6, p, a, ul, ol {
+h3,h4,h5,h6, p, a, ul, ol, small {
     font-family: 'Outfit', sans-serif;
 }
 p {
@@ -68,6 +68,7 @@ p {
 a {
     text-decoration: none;
     font-size: 14px;
+    color: inherit;
 }
 
 a:visited {
@@ -349,6 +350,8 @@ ul {
 /*----------STYLES FOOTER----------*/
 
 footer {
+    display: flex;
+    flex-direction: column;
     padding: 48px 16px;
     background: #212121;
 }
@@ -371,10 +374,29 @@ footer {
     align-items: flex-end;
     gap: 16px;
     color: white;
+    margin: 0;
 }
 
-.block-liste-logo ul li {
+.block-liste-logo ul li a {
+    color: white;
+}
 
+footer small, footer span {
+    text-align: right;
+}
+
+footer span {
+    display: inline-block;
+    margin-top: 62px;
+    text-transform: uppercase;
+    font-family: 'Brice Black', sans-serif;
+    font-size: 84px;
+    color: white;
+}
+
+footer small {
+    font-size: 13px;
+    color: #B6B6B6;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
