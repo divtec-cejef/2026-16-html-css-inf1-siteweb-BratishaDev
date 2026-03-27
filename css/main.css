@@ -3,7 +3,7 @@
     src: url('sources/Fonts/Brice Black.otf') format('truetype');
 }
 
-                                    /*----------STYLES GÉNÉRAUX----------*/
+/*-----------------------------------------------STYLES GÉNÉRAUX-----------------------------------------------*/
 * {
     box-sizing: border-box;
 }
@@ -74,7 +74,7 @@ ul {
     padding-inline-start: 0;
 }
 
-                                    /*----------STYLES HEADER----------*/
+/*-----------------------------------------------STYLES HEADER-----------------------------------------------*/
 
 .btn-recherche svg,
 .btn-compte svg,
@@ -102,7 +102,7 @@ ul {
     display: flex;
     align-items: center;
     border-radius: 50px;
-    box-shadow: 0px 0px 16px 0px rgba(153, 153, 153, 0.23);
+    box-shadow: 0 0 16px 0 rgba(153, 153, 153, 0.23);
     gap: 5px;
     background: white;
     width: 238px;
@@ -135,7 +135,64 @@ ul {
     margin: 6px;
 }
 
-                                    /*----------STYLES MAIN----------*/
+/*--------------------------------------------STYLES MENU DE NAVIGATION--------------------------------------------*/
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;        /* спрятано за правым краем */
+    width: 75%;
+    max-width: 320px;
+    height: 100%;
+    background: linear-gradient(to bottom, #FFC412, white, #12DFFF);
+    z-index: 100;
+    transition: right 0.3s ease;
+    padding: 24px;
+}
+
+.nav-menu.open {
+    right: 0;            /* выезжает */
+}
+
+.nav-menu ul {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav-menu ul li a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #202020;
+}
+
+.btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 99;
+}
+
+.nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*-----------------------------------------------STYLES MAIN-----------------------------------------------*/
 
 .hero-slider {
     display: flex;
@@ -259,7 +316,7 @@ ul {
     display: flex;
     flex-direction: column;
     border-radius: 16px;
-    box-shadow: 0px 0px 16px 0px rgba(153, 153, 153, 0.23);
+    box-shadow: 0 0 16px 0 rgba(153, 153, 153, 0.23);
     gap: 20px;
 }
 
