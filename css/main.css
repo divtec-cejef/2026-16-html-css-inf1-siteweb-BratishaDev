@@ -144,7 +144,7 @@ ul {
     width: 75%;
     max-width: 320px;
     height: 100%;
-    background: linear-gradient(to bottom, #FFC412, white, #12DFFF);
+    background: linear-gradient(135deg, #FFC412, white, #12DFFF);
     z-index: 100;
     transition: right 0.3s ease;
     padding: 24px;
@@ -162,9 +162,10 @@ ul {
 }
 
 .nav-menu ul li a {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #202020;
+    font-family: 'Brice Black', sans-serif;
 }
 
 .btn-close {

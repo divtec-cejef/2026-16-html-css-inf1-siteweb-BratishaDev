@@ -18,27 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 </head>
 
-<script src="js/main.js"></script>
-
-<!-- оверлей для размытия фона -->
-<div class="nav-overlay"></div>
-
-<!-- само меню -->
-<nav class="nav-menu">
-    <button class="btn-close">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-            <path d="M18 6L6 18M6 6l12 12" stroke="#202020" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-    </button>
-    <ul>
-        <li><a href="Accueil.html">Accueil</a></li>
-        <li><a href="Recettes.html">Recettes</a></li>
-        <li><a href="GuideIngredients.html">Guide des ingrédients</a></li>
-        <li><a href="Articles.html">Articles</a></li>
-        <li><a href="AProposDeNous.html">À propos de nous</a></li>
-    </ul>
-</nav>
-
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
@@ -84,7 +63,28 @@
     <symbol id="fleche" viewBox="0 0 10 16" fill="none">
         <path d="M0 13.7143L5.71428 8L0 2.28571L1.14286 0L9.14286 8L1.14286 16L0 13.7143Z" fill="#12DFFF"/>
     </symbol>
+
+    <symbol id="croix" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M18 6L6 18M6 6l12 12" stroke="#202020" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
 </svg>
+
+<!-- superposition pour estomper l'arrière-plan -->
+<div class="nav-overlay"></div>
+
+<!-- le menu de navigation -->
+<nav class="nav-menu">
+    <button class="btn-close">
+        <svg aria-hidden="true"><use href="#croix"/></svg>
+    </button>
+    <ul>
+        <li><a href="Accueil.html">Accueil</a></li>
+        <li><a href="Recettes.html">Recettes</a></li>
+        <li><a href="GuideIngredients.html">Guide des ingrédients</a></li>
+        <li><a href="Articles.html">Articles</a></li>
+        <li><a href="AProposDeNous.html">À propos de nous</a></li>
+    </ul>
+</nav>
 
 <header>
     <a href="Accueil.html" class="logo">
@@ -179,5 +179,7 @@
         <small>&copy;2026 - Andrii Dimov | <a href="mailto:andrii.dimov@divtec.ch">andrii.dimov@divtec.ch</a></small>
     </div>
 </footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
