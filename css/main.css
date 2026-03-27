@@ -8,12 +8,8 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: #f0f0f0;
-}
-
 body {
-    max-width: 900px;
+   /* max-width: 900px;*/
     overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
     margin: 0 auto;
 }
@@ -38,7 +34,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 10; /* au-dessus du slideur */
-    background-color: white;
 }
 
 button {
@@ -112,13 +107,13 @@ ul {
     background: white;
     width: 238px;
     height: 44px;
-    flex-shrink: 0;
+    flex: 1;
     padding: 4px 8px 4px 16px;
 }
 
 .search-bar input {
     font-size: 16px;
-    min-width: 0;
+    min-width: 50px;
     flex: 1;
 }
 
@@ -171,11 +166,12 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;    /* s'étend sur tout le bloc */
+    object-position: center top;
     z-index: -1;
 }
 
 .slide-1 img {
-    object-position: right center; /* сдвигает видимую область влево */
+    object-position: right center; /* déplace la zone visible vers la gauche */
 }
 
 .slide::after {
@@ -187,10 +183,10 @@ ul {
     height: 100%;
     background: linear-gradient(
             to bottom,
-            white 0%,       /* держим белый до 0% */
-            rgba(255,255,255, 0.8) 25%,  /* début d'une transition abrupte */
-            rgba(255,255,255, 0.4) 55%,   /* tombe rapidement */
-            rgba(255,255,255, 0.1) 75%,   /* ralentit */
+            white 0%,       /* on conserve le blanc jusqu'à 0 % */
+            rgba(255,255,255, 0.7) 23%,  /* début d'une transition abrupte */
+            rgba(255,255,255, 0.35) 50%,   /* tombe rapidement */
+            rgba(255,255,255, 0.1) 70%,   /* ralentit */
             transparent 85%  /* le dégradé s'estompe progressivement */
     );
     z-index: 1;
@@ -198,16 +194,16 @@ ul {
 
 .slide-content {
     position: relative;
-    z-index: 2; /* поверх картинки и градиента */
-    margin-top: 180px; /* отступ от хедера */
+    z-index: 2; /* par-dessus l'image et le dégradé */
+    margin-top: 150px; /* Fin de l'en-tête */
     text-align: center;
 }
 
 .slide-content svg {
-    position: absolute; /* вырываем из потока */
+    position: absolute; /* extraire du flux */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* центрируем по середине контента */
+    transform: translate(-50%, -50%); /* centrer au milieu du contenu */
     z-index: -1;
     width: 160%;
     height: 160%;
@@ -295,10 +291,15 @@ ul {
     border: 2px solid #12DFFF;
     border-radius: 37px;
     width: 164px;
+    transition: transform 0.3s ease;
 }
 
 .bth-leger:visited {
     color: #12DFFF;
+}
+
+.bth-leger:hover {
+    transform: scale(1.1);
 }
 
 .ligne {
@@ -350,10 +351,15 @@ ul {
 /*----------STYLES FOOTER----------*/
 
 footer {
+    padding: 48px 24px;
+    background: #212121;
+}
+
+.footer-content {
     display: flex;
     flex-direction: column;
-    padding: 48px 16px;
-    background: #212121;
+    max-width: 90vmin;
+    margin: 0 auto;
 }
 
 .block-liste-logo {
@@ -401,10 +407,30 @@ footer small {
 
 /* ---------- MEDIA QUERIES ---------- */
 
-@media (min-width: 600px) {
+@media (min-width: 720px) {
+
+    header {
+        gap: 24px;
+    }
+
     #blue-accueil {
         width: 80vmin;
         height: 80vmin;
         left: -55vmin;
+    }
+
+    .hero-slider {
+        min-height: 1200px;
+    }
+
+    .search-bar {
+        max-width: 600px;
+    }
+
+    .liste-sections {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
