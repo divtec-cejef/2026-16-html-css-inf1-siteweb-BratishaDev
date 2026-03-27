@@ -62,7 +62,7 @@ p {
 
 a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
     color: inherit;
 }
 
@@ -86,6 +86,10 @@ ul {
 .logo, .logo svg {
     width: 50px;
     height: 32px;
+}
+
+.btn-menu {
+    cursor: pointer; /* remplace le curseur par une main */
 }
 
 .btn-compte, .btn-menu {
@@ -151,7 +155,7 @@ ul {
 }
 
 .nav-menu.open {
-    right: 0;            /* выезжает */
+    right: 0;            /* sort */
 }
 
 .nav-menu ul {
@@ -162,19 +166,31 @@ ul {
 }
 
 .nav-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #202020;
     font-family: 'Brice Black', sans-serif;
 }
+.nav-menu ul li a img {
+    width: 20px;
+    height: 20px;
+}
 
 .btn-close {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 26px;
+    right: 20px;
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.btn-close svg {
+    width: 32px;
+    height: 32px;
 }
 
 .nav-overlay {
@@ -361,11 +377,11 @@ ul {
 }
 
 .ligne {
-    border: none;          /* убираем стандартный стиль */
-    height: 2px;           /* толщина */
-    background-color: #FFC412;   /* цвет */
-    width: 50px;            /* ширина */
-    margin: 16px 0;     /* центрирование */
+    border: none;          /* Supprimer le style par défaut */
+    height: 2px;           /* épaisseur */
+    background-color: #FFC412;
+    width: 50px;
+    margin: 16px 0;     /* centrage */
 }
 
 .boitier-icone {
@@ -482,7 +498,8 @@ footer small {
     }
 
     .search-bar {
-        max-width: 600px;
+        max-width: 450px;
+        margin: auto 16px;
     }
 
     .liste-sections {
