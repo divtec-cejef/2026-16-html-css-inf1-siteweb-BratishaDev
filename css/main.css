@@ -62,7 +62,7 @@ p {
 
 a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: inherit;
 }
 
@@ -144,7 +144,7 @@ ul {
 .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;        /* спрятано за правым краем */
+    right: -100%;        /* masqué derrière le bord droit */
     width: 75%;
     max-width: 320px;
     height: 100%;
@@ -404,6 +404,13 @@ ul {
     height: 16px;
 }
 
+.cercle-de-fond {
+    border-radius: 50%;          /* arrondit le carré en cercle */
+    filter: blur(80px);          /* flou sur l'élément, crée un effet de lueur */
+    opacity: 0.97;               /* presque opaque (0 = invisible, 1 = opaque) */
+    pointer-events: none;        /* les clics passent à travers l'élément */
+}
+
 #blue-accueil {
     position: absolute; /* sorti du flux, coordonnées depuis main */
     z-index: 0;
@@ -412,13 +419,17 @@ ul {
     transform: translateY(-50%); /* remonte de la moitié de sa hauteur = centré verticalement */
     width: 145vmin;
     height: 145vmin;             /* valeurs identiques = carré, vmin depuis le petit côté de l'écran */
-    border-radius: 50%;          /* arrondit le carré en cercle */
-    filter: blur(80px);          /* flou sur l'élément, crée un effet de lueur */
-    opacity: 0.97;               /* presque opaque (0 = invisible, 1 = opaque) */
-    pointer-events: none;        /* les clics passent à travers l'élément */
     background: radial-gradient(
             circle,         /* forme circulaire du dégradé (ellipse par défaut) */
             #12DFFF,        /* couleur au centre */
+            transparent 85% /* disparition progressive à partir de 90% du rayon */
+    );
+}
+
+#orange-recettes {
+    background: radial-gradient(
+            circle,         /* forme circulaire du dégradé (ellipse par défaut) */
+            #FF9500,        /* couleur au centre */
             transparent 85% /* disparition progressive à partir de 90% du rayon */
     );
 }
@@ -459,6 +470,7 @@ footer {
 
 .block-liste-logo ul li a {
     color: white;
+    font-size: 1rem;
 }
 
 footer small, footer span {
