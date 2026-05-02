@@ -19,10 +19,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow: clip;
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
-    background-color: white;
+    /*background-color: white;*/
 }
 
 header {
