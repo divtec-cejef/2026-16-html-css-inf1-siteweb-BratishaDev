@@ -19,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     overflow: clip;
     position: relative; /* ancre pour #blue-accueil, les coordonnées sont calculées depuis lui */
     min-height: 100vh;  /* minimum toute la hauteur de l'écran, s'étire si le contenu est plus grand */
@@ -222,6 +222,12 @@ ul {
 }
 
 /*-----------------------------------------------STYLES MAIN-----------------------------------------------*/
+
+.page-wrapper {
+    position: relative;
+    overflow: hidden; /* обрезает круг снизу */
+}
+
 main > h1 + p {
     margin: 0 0 20px 0;
     width: 400px;
@@ -343,6 +349,7 @@ main > h1 {
     position: relative;
     z-index: 2;
     margin: 48px 56px;
+    padding-top: calc(25vh - 48px);
     gap: 40px;
 }
 
@@ -451,16 +458,38 @@ main > h1 {
 #jaune-recettes {
     position: absolute;
     z-index: -1;
-    top: -30vmin;
-    transform: translateY(-50%);
-    width: 150vmin;
-    height: 150vmin;
+    width: 200vw;
+    height: 200vw; /* vw car le cercle est proportionnel à la largeur */
+    top: calc(-12vh - 100vw); /* centré à -12vh, soit la moitié de la hauteur */
+    left: calc(50% - 100vw); /* centré à 50 %, moins la moitié de la largeur */
     background: radial-gradient(
             circle,         /* forme circulaire du dégradé (ellipse par défaut) */
             #FFC412,        /* couleur au centre */
-            transparent 85% /* disparition progressive à partir de 90% du rayon */
+            transparent 70% /* disparition progressive à partir de 70% du rayon */
     );
+    /*outline: 2px solid blue;*/
 }
+/*
+#jaune-recettes::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: blue;
+}
+
+#jaune-recettes::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: blue;
+}
+*/
 
 .bloc-carte-categorie-recettes {
     display: flex;
@@ -529,7 +558,7 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: column;
-    max-width: 100vmin;
+    max-width: 84vmin;
     margin: 0 auto;
 }
 
@@ -592,8 +621,10 @@ footer small {
     }
 
     #jaune-recettes {
-        width: 120vmax;
-        height: 120vmax;
+        width: 130vh;
+        height: 130vh;
+        top: calc(-10vh - 65vh);
+        left: calc(50% - 65vh);
     }
 
     .hero-slider {
