@@ -454,19 +454,46 @@ main > h1 {
     );
 }
 
-#jaune-recettes {
+.cercle-top {
     position: absolute;
     z-index: -1;
     width: 200vw;
     height: 200vw; /* vw car le cercle est proportionnel à la largeur */
     top: calc(-12vh - 100vw); /* centré à -12vh, soit la moitié de la hauteur */
     left: calc(50% - 100vw); /* centré à 50 %, moins la moitié de la largeur */
+    /*outline: 2px solid blue;*/
+}
+
+#jaune-recettes {
     background: radial-gradient(
             circle,         /* forme circulaire du dégradé (ellipse par défaut) */
             #FFC412,        /* couleur au centre */
-            transparent 70% /* disparition progressive à partir de 70% du rayon */
+            transparent 72% /* disparition progressive à partir de 72% du rayon */
     );
-    /*outline: 2px solid blue;*/
+}
+
+#orange-soupes {
+    background: radial-gradient(
+            circle,
+            #FF6200,
+            transparent 72%
+    );
+}
+
+#orange-plats {
+    background: radial-gradient(
+            circle,
+            #FF9500,
+            transparent 72%
+    );
+}
+
+#rose-desserts {
+    background: radial-gradient(
+            circle,
+            #FF89B8,
+            transparent 72%
+    );
 }
 /*
 #jaune-recettes::before {
@@ -495,11 +522,11 @@ main > h1 {
     justify-content: center;
     border-radius: 16px;
     margin: 12px 0;
-    box-shadow: 0 0 16px 0 rgba(153, 153, 153, 0.15);
+    box-shadow: 0 0 12px 0 rgba(150, 150, 150, 0.95);
     width: 400px;
     overflow: hidden;
     position: relative;
-
+    color: white;
 }
 
 .block-carte-recettes img {
@@ -512,15 +539,11 @@ main > h1 {
 }
 
 .recette img {
-    filter: brightness(50%); /* On assombrit l'image elle-même (100 % = originale, 0 % = noire) */
+    filter: brightness(55%); /* On assombrit l'image elle-même (100 % = originale, 0 % = noire) */
 }
 
 #bouillon-viande img  {
     object-position: center 40%;
-}
-
-.block-carte-recettes, .recette {
-    color: white;
 }
 
 .categorie a {
@@ -559,7 +582,7 @@ main > h1 {
     display: flex;
     justify-content: space-between;
 }
-/*----------STYLES FOOTER----------*/
+                                        /*----------STYLES FOOTER----------*/
 
 footer {
     padding: 48px 24px;
@@ -631,7 +654,7 @@ footer small {
         left: -55vmin;
     }
 
-    #jaune-recettes {
+    .cercle-top {
         width: 130vh;
         height: 130vh;
         top: calc(-10vh - 65vh);
