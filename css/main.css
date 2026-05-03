@@ -260,7 +260,7 @@ main > h1 {
     position: relative; /* ancre pour le contenu */
 }
 
-.slide img, .bloc-carte-categorie-recettes img {
+.slide img, .block-carte-recettes img {
     position: absolute;
     top: 0;
     left: 0;
@@ -349,7 +349,6 @@ main > h1 {
     position: relative;
     z-index: 2;
     margin: 48px 56px;
-    padding-top: calc(25vh - 48px);
     gap: 40px;
 }
 
@@ -491,7 +490,7 @@ main > h1 {
 }
 */
 
-.bloc-carte-categorie-recettes {
+.block-carte-recettes {
     display: flex;
     justify-content: center;
     border-radius: 16px;
@@ -503,21 +502,33 @@ main > h1 {
 
 }
 
-.bloc-carte-categorie-recettes img {
+.block-carte-recettes img {
     z-index: 0;              /*On place l'image sous le texte (z-index: 1), mais au-dessus de l'arrière-plan main */
     object-position: center; /* On centre : l'image sera rognée de manière uniforme en haut et en bas */
-    filter: brightness(70%); /* On assombrit l'image elle-même (100 % = originale, 0 % = noire) */
+}
+
+.categorie img {
+    filter: brightness(60%); /* On assombrit l'image elle-même (100 % = originale, 0 % = noire) */
+}
+
+.recette img {
+    filter: brightness(50%); /* On assombrit l'image elle-même (100 % = originale, 0 % = noire) */
 }
 
 #bouillon-viande img  {
     object-position: center 40%;
 }
 
-.recette {
-    color: deepskyblue;
+.block-carte-recettes, .recette {
+    color: white;
 }
 
-.recette a {
+.categorie a {
+    display: flex;
+    justify-content: center;
+}
+
+.block-carte-recettes a {
     padding: 28px 24px;
     border-radius: 16px;
     flex: 1;
@@ -641,5 +652,11 @@ footer small {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1231px) {
+    .liste-sections {
+        padding-top: calc(25vh - 48px);
     }
 }
