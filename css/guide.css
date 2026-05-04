@@ -3,7 +3,7 @@
 .guide-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     padding: 20px;
     max-width: 500px;
     margin: 0 auto;
@@ -12,7 +12,7 @@
 .ingredient-bloc {
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
     background: white;
 }
 
@@ -31,9 +31,14 @@
     gap: 12px;
 }
 
-.ingredient-header img #tvorog {
-    object-position: center 20%;
+#tvorog {
+    object-position: center 70%;
 }
+
+#salo{
+    object-position: center 67%;
+}
+
 
 .ingredient-header[aria-expanded="true"] {
     border-radius: 16px 16px 0 0;
@@ -41,14 +46,15 @@
 
 .ingredient-nom {
     font-family: 'Ultra', serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: #202020;
 }
 
 /* nom original en cyrillique — reset Ultra vers Outfit */
 .ingredient-nom-original {
     font-family: 'Outfit', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: bold;
 }
 
 /* cercles de rareté — base commune */
@@ -61,8 +67,8 @@
 }
 
 .rarete-verte  { background: #34C759; }
-.rarete-jaune  { background: #FF8800; border: 2px solid #202020; }
-.rarete-orange { background: linear-gradient(to right, #FF3B30 50%, #FF8800 50%); }
+.rarete-orange  { background: #FF8800; }
+.rarete-rouge-orange { background: linear-gradient(to right, #FF3B30 50%, #FF8800 50%); }
 .rarete-rouge  { background: #FF3B30; }
 
 .ingredient-details {
@@ -80,12 +86,12 @@
     height: 200px;
     object-fit: cover;
     border-radius: 0 0 16px 16px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17);
 }
 
 .ingredient-texte {
     margin-top: -20px;
-    padding: 36px 16px 16px 16px;
+    padding: 32px 16px 16px 16px;
     background-color: #F5F1E8;
 }
 
@@ -95,6 +101,10 @@
     font-size: 1rem;
     line-height: 22px;
     margin: 0 0 4px 0;
+}
+
+.ingredient-texte p {
+    margin: 6px 0 4px 0;
 }
 
 .ingredient-texte ul {
