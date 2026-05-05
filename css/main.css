@@ -228,7 +228,7 @@ ul {
 
 .page-wrapper {
     position: relative;
-    overflow: hidden; /* обрезает круг снизу */
+    overflow: hidden; /* découpe le cercle*/
 }
 
 main > h1 + p {
