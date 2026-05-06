@@ -441,6 +441,7 @@ main > h1 {
 }
 
 .cercle-de-fond {
+    position: absolute;          /* sorti du flux, coordonnées depuis main */
     border-radius: 50%;          /* arrondit le carré en cercle */
     filter: blur(80px);          /* flou sur l'élément, crée un effet de lueur */
     opacity: 0.97;               /* presque opaque (0 = invisible, 1 = opaque) */
@@ -448,7 +449,6 @@ main > h1 {
 }
 
 #blue-accueil {
-    position: absolute; /* sorti du flux, coordonnées depuis main */
     z-index: 0;
     left: -106vmin;               /* dépasse vers la gauche, valeur négative = vers l'extérieur */
     top: 60%;                    /* bord supérieur de l'élément au milieu de main */
@@ -463,7 +463,6 @@ main > h1 {
 }
 
 .cercle-top {
-    position: absolute;
     z-index: -1;
     width: 200vw;
     height: 200vw; /* vw car le cercle est proportionnel à la largeur */
