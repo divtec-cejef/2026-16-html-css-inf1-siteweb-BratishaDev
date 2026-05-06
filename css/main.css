@@ -599,6 +599,8 @@ main > h1 {
                                         /*----------STYLES FOOTER----------*/
 
 footer {
+    display: flex;
+    justify-content: center;
     padding: 48px 16px;
     background: #212121;
 }
@@ -606,8 +608,8 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: column;
-    max-width: 84vmin;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 
 .block-liste-logo {
