@@ -9,9 +9,13 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
+    width: 100%;
+}
+
 body {
    /* max-width: 900px;*/
-    overflow-x: hidden; /* masque le contenu qui dépasse les bords horizontaux */
     margin: 0 auto;
 }
 
@@ -233,7 +237,8 @@ ul {
 
 main > h1 + p {
     margin: 0 0 20px 0;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -534,7 +539,8 @@ main > h1 {
     border-radius: 16px;
     margin: 12px 0;
     box-shadow: 0 0 12px 0 rgba(150, 150, 150, 0.95);
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     overflow: hidden;
     position: relative;
     color: white;
