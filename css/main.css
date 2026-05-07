@@ -458,7 +458,7 @@ main > h1 {
     background: radial-gradient(
             circle,         /* forme circulaire du dégradé (ellipse par défaut) */
             #12DFFF,        /* couleur au centre */
-            transparent 85% /* disparition progressive à partir de 90% du rayon */
+            transparent 85% /* disparition progressive à partir de 85% du rayon */
     );
 }
 
@@ -562,18 +562,25 @@ main > h1 {
     object-position: center 40%;
 }
 
+.categorie {
+    max-height: 100%;
+    height: 168px;
+}
+
 .categorie a {
     display: flex;
     justify-content: center;
-    max-height: 170px;
+    align-items: center;
+    height: 100%;
 }
 .categorie a h2 {
     color: white;
     text-align: center;
+    line-height: 36px;
 }
 
 .block-carte-recettes a {
-    padding: 20px 24px;
+    padding: 24px 20px;
     border-radius: 16px;
     flex: 1;
     z-index: 1;         /* Placer le contenu au-dessus de l'image */

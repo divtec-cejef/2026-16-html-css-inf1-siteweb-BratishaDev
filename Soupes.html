@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
     <symbol id="icon-logo" viewBox="0 0 50 32">
@@ -69,101 +71,104 @@
     </symbol>
 </svg>
 
-<!-- superposition pour estomper l'arrière-plan -->
-<div class="nav-overlay"></div>
+<div class="page-wrapper">
+    <div class = "cercle-de-fond cercle-top" id="orange-soupes"></div>
 
-<!-- le menu de navigation -->
-<nav class="nav-menu">
-    <button class="btn-close">
-        <svg aria-hidden="true"><use href="#croix"/></svg>
-    </button>
-    <ul>
-        <li>
-            <a href="index.html">
-                <img src="sources/img/accueil/icon-home.png" alt="Icon Accueil">
-                Accueil
-            </a>
-        </li>
-        <li>
-            <a href="Recettes.html">
-                <img src="sources/img/accueil/icon-recettes.png" alt="Icon Recettes">
-                Recettes
-            </a>
-        </li>
-        <li>
-            <a href="GuideIngredients.html">
-                <img src="sources/img/accueil/icon-guide.png" alt="IconGuide des Ingredients">
-                Guide des ingrédients
-            </a>
-        </li>
-        <li>
-            <a href="Articles.html">
-                <img src="sources/img/accueil/icon-articles.png" alt="Icon Articles">
-                Articles
-            </a>
-        </li>
-        <li>
-            <a href="AProposDeNous.html">
-                <img src="sources/img/accueil/icon-info.png" alt="Icon A Propos De Nous">
-                À propos de nous
-            </a>
-        </li>
-    </ul>
-</nav>
+    <!-- superposition pour estomper l'arrière-plan -->
+    <div class="nav-overlay"></div>
 
-<header>
-    <a href="index.html" class="logo">
-        <svg aria-hidden="true"><use href="#icon-logo"/></svg>
-    </a>
-    <div class="search-bar">
-        <input type="text" placeholder="Rechercher">
-        <button class="btn-recherche">
-            <svg aria-hidden="true"><use href="#icon-recherche"/></svg>
+    <!-- le menu de navigation -->
+    <nav class="nav-menu">
+        <button class="btn-close">
+            <svg aria-hidden="true"><use href="#croix"/></svg>
         </button>
-    </div>
-    <a href="#" class="btn-compte">
-        <svg aria-hidden="true"><use href="#icon-compte"/></svg>
-    </a>
-    <button class="btn-menu">
-        <svg aria-hidden="true"><use href="#icon-menu"/></svg>
-    </button>
-</header>
-<div class = "cercle-de-fond cercle-top" id="orange-soupes"></div>
-<main>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="sources/img/accueil/icon-home.png" alt="Icon Accueil">
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="Recettes.html">
+                    <img src="sources/img/accueil/icon-recettes.png" alt="Icon Recettes">
+                    Recettes
+                </a>
+            </li>
+            <li>
+                <a href="GuideIngredients.html">
+                    <img src="sources/img/accueil/icon-guide.png" alt="IconGuide des Ingredients">
+                    Guide des ingrédients
+                </a>
+            </li>
+            <li>
+                <a href="Articles.html">
+                    <img src="sources/img/accueil/icon-articles.png" alt="Icon Articles">
+                    Articles
+                </a>
+            </li>
+            <li>
+                <a href="AProposDeNous.html">
+                    <img src="sources/img/accueil/icon-info.png" alt="Icon A Propos De Nous">
+                    À propos de nous
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-    <h1>Soupes</h1>
-    <div class = "block-carte-recettes recette">
-        <img src="sources/img/recettes/front_view_delicious_borsch_ukrainian_beet_soup_inside_plate_white.jpg" alt="Bortsch ukrainien">
-        <a href="">
-            <h3>Bortsch ukrainien</h3>
-            <div class = "petites-infos">
-                <p>Un bouillon rouge profond où se mêlent légumes, viande et l’odeur chaleureuse de l’aneth</p>
-                <span>210 min</span>
-            </div>
+    <header>
+        <a href="index.html" class="logo">
+            <svg aria-hidden="true"><use href="#icon-logo"/></svg>
         </a>
-    </div>
-    <div class = "block-carte-recettes recette">
-        <img src="sources/img/recettes/Solyanka-assemblée-à-la-viande-photo.jpg" alt="">
-        <a href="">
-            <h3>Solyanka assemblée à la viande</h3>
-            <div class = "petites-infos">
-                <p>Une soupe épaisse, riche et acidulée, au goût concentré de viande et de cornichons</p>
-                <span>240 min</span>
-            </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher">
+            <button class="btn-recherche">
+                <svg aria-hidden="true"><use href="#icon-recherche"/></svg>
+            </button>
+        </div>
+        <a href="#" class="btn-compte">
+            <svg aria-hidden="true"><use href="#icon-compte"/></svg>
         </a>
-    </div>
-    <div class = "block-carte-recettes recette" id="bouillon-viande">
-        <img src="sources/img/recettes/Photo-de-bouillon.jpg" alt="">
-        <a href="">
-            <h3>Bouillon de viande (pour Bortsch)</h3>
-            <div class = "petites-infos">
-                <p>Bouillon de viande riche et transparent, avec des racines grillées et des épices.</p>
-                <span>180 min</span>
-            </div>
+        <button class="btn-menu">
+            <svg aria-hidden="true"><use href="#icon-menu"/></svg>
+        </button>
+    </header>
 
-        </a>
-    </div>
-</main>
+    <main>
+        <h1>Soupes</h1>
+        <div class = "block-carte-recettes recette">
+            <img src="sources/img/recettes/front_view_delicious_borsch_ukrainian_beet_soup_inside_plate_white.jpg" alt="Bortsch ukrainien">
+            <a href="">
+                <h3>Bortsch ukrainien</h3>
+                <div class = "petites-infos">
+                    <p>Un bouillon rouge profond où se mêlent légumes, viande et l’odeur chaleureuse de l’aneth</p>
+                    <span>210 min</span>
+                </div>
+            </a>
+        </div>
+        <div class = "block-carte-recettes recette">
+            <img src="sources/img/recettes/Solyanka-assemblée-à-la-viande-photo.jpg" alt="">
+            <a href="">
+                <h3>Solyanka assemblée à la viande</h3>
+                <div class = "petites-infos">
+                    <p>Une soupe épaisse, riche et acidulée, au goût concentré de viande et de cornichons</p>
+                    <span>240 min</span>
+                </div>
+            </a>
+        </div>
+        <div class = "block-carte-recettes recette" id="bouillon-viande">
+            <img src="sources/img/recettes/Photo-de-bouillon.jpg" alt="">
+            <a href="">
+                <h3>Bouillon de viande (pour Bortsch)</h3>
+                <div class = "petites-infos">
+                    <p>Bouillon de viande riche et transparent, avec des racines grillées et des épices.</p>
+                    <span>180 min</span>
+                </div>
+
+            </a>
+        </div>
+    </main>
+</div>
 
 <footer>
     <div class="footer-content">
