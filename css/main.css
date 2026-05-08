@@ -661,7 +661,7 @@ footer span {
     margin-top: 62px;
     text-transform: uppercase;
     font-family: 'Ultra', sans-serif;
-    font-size: 4.75rem;
+    font-size: 4.625rem;
     color: white;
 }
 
@@ -705,6 +705,10 @@ footer small {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    footer span {
+        font-size: 5rem;
     }
 }
 

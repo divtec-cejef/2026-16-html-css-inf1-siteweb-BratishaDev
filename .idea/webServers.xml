@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="58970177-b480-4848-86b6-ed758a94f116" name="host infomaniak dimoand.divtec.me" url="https://dimoand.divtec.me">
+        <fileTransfer host="yi3p7z.ftp.infomaniak.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
