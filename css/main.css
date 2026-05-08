@@ -653,6 +653,7 @@ footer {
 
 footer small, footer span {
     text-align: right;
+    align-self: end;
 }
 
 footer span {
@@ -660,9 +661,8 @@ footer span {
     margin-top: 62px;
     text-transform: uppercase;
     font-family: 'Ultra', sans-serif;
-    font-size: 4.875rem;
+    font-size: 4.75rem;
     color: white;
-
 }
 
 footer small {
