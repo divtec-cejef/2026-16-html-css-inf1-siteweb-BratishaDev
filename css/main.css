@@ -71,7 +71,7 @@ h3 {
 }
 
 
-h3,h4,h5,h6, p, a, ul, ol, small {
+h3,h4,h5,h6, p, a, ul, ol, small, th, td {
     font-family: 'Outfit', sans-serif;
 }
 p {

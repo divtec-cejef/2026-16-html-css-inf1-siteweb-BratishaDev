@@ -23,9 +23,8 @@
     max-width: 100vmin;
 }
 
-.recette-intro h1 {
+.recette-intro h3 {
     text-align: left;
-    margin: 0 0 12px 0;
 }
 
 .recette-intro p {
@@ -96,18 +95,28 @@
     background: #FFC412;
 }
 
+.recette-ingredients tbody td {
+    background-color: #FFF8E1;
+}
+
 .recette-ingredients th {
     padding: 14px 16px;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 .recette-ingredients td {
     padding: 12px 16px;
     font-size: 0.9rem;
+    font-weight: 500;
     border-bottom: 1px solid #F0F0F0;
     background: white;
+    text-align: justify;
+}
+
+.recette-ingredients tr td:first-child {
+    text-align: left;
 }
 
 .recette-ingredients tbody tr:last-child td {
@@ -117,13 +126,24 @@
 
 .ingredient-poids {
     display: inline-block;
-    background: #FFC412;
     padding: 4px 10px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 0.875rem;
     min-width: 50px;
-    text-align: center;
+    text-align: left;
+}
+
+.ingredient-poids::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    background: #FFC412;
+    border-radius: 62px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    text-align: left;
 }
 
 /* Préparation */
