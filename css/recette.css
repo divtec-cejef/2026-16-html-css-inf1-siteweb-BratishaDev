@@ -1,10 +1,13 @@
 /* ------- PAGE RECETTE ------- */
 
+span {
+    font-family: 'Outfit', sans-serif;
+}
+
 .recette-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     gap: 24px;
 }
 
@@ -16,6 +19,7 @@
     object-fit: cover;
     object-position: center;
     border-radius: 16px;
+    box-shadow: 0 0 15px 7px rgba(153,153,153,0.25);
 }
 
 /* Intro */
@@ -37,32 +41,41 @@
 /* Complexité et temps */
 .recette-meta {
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    padding: 10px 24px;
+    width: 100%;
+    max-width: 400px;
     background: white;
     border-radius: 16px;
-    box-shadow: 0 0 12px rgba(153,153,153,0.2);
+    box-shadow: 0 0 14px rgba(153,153,153,0.22);
 }
 
 .recette-meta-item {
-    display: flex;
     flex-direction: column;
-    gap: 6px;
-    flex: 1;
+    display: flex;
+    gap: 8px;
 }
 
-.recette-meta-item img {
-    align-self: flex-start;
+.recette-meta-item:last-child div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recette-meta-item:last-child img {
+    width: 18px;
+    height: 21px;
 }
 
 .recette-meta-label {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #212121;
 }
 
 .toques {
     display: flex;
-    gap: 4px;
+    gap: 6px;
 }
 
 .toque {
@@ -77,17 +90,17 @@
 
 .recette-temps {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #212121;
 }
 
 /* Tableau ingrédients */
 .recette-ingredients {
-    width: calc(100% - 40px);
-    margin: 0 20px 20px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 12px rgba(153,153,153,0.2);
+    box-shadow: 0 3px 12px rgba(153,153,153,0.2);
     border-collapse: collapse;
 }
 
@@ -125,7 +138,8 @@
 }
 
 .ingredient-poids {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 4px 10px;
     border-radius: 6px;
     font-weight: 600;
@@ -148,7 +162,8 @@
 
 /* Préparation */
 .recette-preparation {
-    padding: 0 20px 20px;
+    max-width: 100vmin;
+
 }
 
 .recette-preparation h3 {
@@ -209,4 +224,10 @@
     color: #666;
     margin: 0;
     text-align: center;
+}
+
+@media (min-height: 720px) {
+    .recette-meta {
+        align-self: end;
+    }
 }
