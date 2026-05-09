@@ -51,13 +51,17 @@
     flex: 1;
 }
 
+.recette-meta-item img {
+    align-self: flex-start;
+}
+
 .recette-meta-label {
     font-size: 0.875rem;
     font-weight: 600;
     color: #212121;
 }
 
-.etoiles {
+.toques {
     display: flex;
     gap: 4px;
 }
