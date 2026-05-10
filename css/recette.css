@@ -35,7 +35,7 @@ span {
 .recette-intro p {
     font-size: 1rem;
     line-height: 24px;
-    color: #333;
+    color: #212121;
     margin: 0 0 12px 0;
 }
 
@@ -270,7 +270,9 @@ span {
 }
 
 @media (min-height: 720px) {
+    /*
     .recette-meta {
         align-self: end;
     }
+     */
 }
