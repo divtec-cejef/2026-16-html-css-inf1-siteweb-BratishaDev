@@ -235,6 +235,12 @@ ul {
     overflow: hidden; /* découpe le cercle*/
 }
 
+.message-developpement {
+    color: gray;
+    font-size: 1.25rem;
+    margin-top: 32px;
+}
+
 main > h1 + p {
     margin: 0 0 20px 0;
     width: 100%;

@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.guide-list:last-child {
+    margin-bottom: 48px;
+}
+
 .ingredient-bloc {
     border-radius: 16px;
     overflow: hidden;
