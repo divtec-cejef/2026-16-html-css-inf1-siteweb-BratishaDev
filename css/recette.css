@@ -21,6 +21,7 @@ span {
     object-position: center;
     border-radius: 16px;
     box-shadow: 0 0 15px 7px rgba(153,153,153,0.25);
+    margin-top: 16px;
 }
 
 /* Intro */
